@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import { Recursive } from 'next/font/google';
 import NextTopLoader from 'nextjs-toploader';
 
@@ -7,13 +6,11 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Providers from '@/components/Providers';
 import { Toaster } from '@/components/ui/toaster';
+import { contructMetadata } from '@/lib/constructMetadata';
 
 const inter = Recursive({ subsets: ['latin'] });
 
-export const metadata: Metadata = {
-  title: 'caseCobra',
-  description: 'Customizable phone cases',
-};
+export const metadata = contructMetadata();
 
 export default function RootLayout({
   children,
