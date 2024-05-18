@@ -26,5 +26,6 @@ export function contructMetadata({
       images: [image],
     },
     icons,
+    metadataBase: new URL('https://casestore.vercel.app/'),
   };
 }
